@@ -1,0 +1,30 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Remote
+scopeName: text.remote
+fileTypes: [remote]
+uuid: 9a91bbbb-b6be-4bae-b624-e9a252fab5ae
+
+patterns:
+  - name: constant.language.proto
+    match: "^#+$"
+    comment: delimiter
+
+
+  - match: "^\\s+(>>>)(.*\n)"
+    captures:
+      '0': {name: line.remote.dirname}
+      '1': {name: comment.remote.prompt}
+      '2': {name: string.remote.dirname}
+
+  - match: "^\\s+::(.*)\n$"
+    captures:
+      '0': {name: line.remote.currentpath}
+      '1': {name: keyword.remote.currentpath}
+
+  - match: "^\\s+(.*\n)$"
+    captures:
+      '0': {name: line.remote.filename}
+      '1': {name: string.remote.filename}
+
+

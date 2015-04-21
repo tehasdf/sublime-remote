@@ -1,0 +1,16 @@
+[
+    {
+        "keys": ["enter"],
+        "command": "select_directory",
+        "context": [
+            {"key": "selector", "operator": "equal", "operand": "line.remote.dirname"}
+        ]
+    },
+    {
+        "keys": ["enter"],
+        "command": "select_file",
+        "context": [
+            {"key": "selector", "operator": "equal", "operand": "line.remote.filename"}
+        ]
+    }
+]

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>remote</string>
+	</array>
+	<key>name</key>
+	<string>Remote</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>delimiter</string>
+			<key>match</key>
+			<string>^#+$</string>
+			<key>name</key>
+			<string>constant.language.proto</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>line.remote.dirname</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>comment.remote.prompt</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.remote.dirname</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>^\s+(&gt;&gt;&gt;)(.*
+)</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>line.remote.currentpath</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.remote.currentpath</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>^\s+::(.*)
+$</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>line.remote.filename</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>string.remote.filename</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>^\s+(.*
+)$</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>text.remote</string>
+	<key>uuid</key>
+	<string>9a91bbbb-b6be-4bae-b624-e9a252fab5ae</string>
+</dict>
+</plist>
